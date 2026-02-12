@@ -9,5 +9,9 @@ public class TestCircleRectangle1 {
         // System.out.println("The radius is " + circle.getRadius());
         // System.out.println("The area is " + circle.getArea());
         // System.out.println("The diameter is " + circle.getDiameter());
+
+        // Dynamic Binding
+        GeometricObject1 pantagon = new Pantagon(5, 4);
+        System.out.println("the color: " + pantagon.getColor());
     }
 }
