@@ -1,11 +1,13 @@
 package Inheritance;
 
-public class Pantagon {
+public class Pantagon extends GeometricObject1 {
 
     private double perimeter;
     private double apothem;
+    private static int count;
 
     public Pantagon() {
+        ++count;
     }
 
     public Pantagon(double perimeter, double apothem) {
@@ -13,17 +15,24 @@ public class Pantagon {
         this.apothem = apothem;
     }
 
-    public double getPerimeter() {
-        return perimeter;
+    public Pantagon(double perimeter,
+            String color, boolean filled) {
+        this.perimeter = perimeter;
+        setColor(color);
+        setFilled(filled);
     }
 
-    public double getApothem() {
-        return apothem;
+    public double getPerimeter() {
+        return this.perimeter;
     }
 
     public double setPerimeter(double perimeter) {
         this.perimeter = perimeter;
         return perimeter;
+    }
+
+    public double getApothem() {
+        return this.apothem;
     }
 
     public double setApothem(double apothem) {
