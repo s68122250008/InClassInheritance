@@ -7,12 +7,13 @@ public class Pantagon extends GeometricObject1 {
     private static int count;
 
     public Pantagon() {
-        ++count;
+        count++;
     }
 
     public Pantagon(double perimeter, double apothem) {
         this.perimeter = perimeter;
         this.apothem = apothem;
+        ++count;
     }
 
     public Pantagon(double perimeter,
@@ -20,6 +21,7 @@ public class Pantagon extends GeometricObject1 {
         this.perimeter = perimeter;
         setColor(color);
         setFilled(filled);
+        ++count;
     }
 
     public double getPerimeter() {
@@ -42,5 +44,9 @@ public class Pantagon extends GeometricObject1 {
 
     public double getArea() {
         return (perimeter * apothem) / 2;
+    }
+
+    public int getCount() {
+        return count++;
     }
 }
